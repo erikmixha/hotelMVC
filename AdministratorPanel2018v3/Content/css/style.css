@@ -1,0 +1,188 @@
+
+#bootstrap-reservation .search-wrap {
+  width: 80%;
+  margin-left:10%;  
+  display: block;
+  margin-top: -11.66em;
+  z-index: 9;
+  background: #fff;
+  padding: 35px;
+}
+
+.bootstrap-form .btn-block {
+  margin-top: 15px;
+  padding: 12px !important;
+}
+
+#scroll {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    text-indent: -9999px;
+    display: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    #scroll span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: -12px;
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #ffffff
+    }
+
+    #scroll:hover {
+        background-color: #e74c3c;
+        opacity: 1;
+        filter: "alpha(opacity=100)";
+        -ms-filter: "alpha(opacity=100)";
+    }
+
+
+
+html, body {
+    background: #fff;
+    padding: 60px 15px;
+    color: #777;
+}
+
+ol {
+    margin-bottom: 50px;
+}
+
+ul li ul {
+    display: none;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+
+.dropdown {
+    position: absolute;
+    line-height: 20px;
+    font-size: 12px;
+    width: 140px;
+    display: none;
+    background: #f6f6f6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/c/cd/Circle-icons-calendar.svg) no-repeat;
+    border-width: thin;
+    height: 15px;
+    width: 15px;
+}
+
+
+#bootstrap-rooms .room-wrap {
+    margin-bottom: 3em;
+}
+
+#bootstrap-rooms .room {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    display: table;
+    overflow: hidden;
+    margin-bottom: 30px;
+    text-align:center
+}
+
+@media screen and (max-width: 768px) {
+    #bootstrap-rooms .room {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #bootstrap-rooms .room {
+        height: 270px;
+    }
+}
+
+#bootstrap-rooms .desc h3 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+    #bootstrap-rooms .desc h3 a {
+        color: #000;
+    }
+
+#bootstrap-rooms .desc .price {
+    position: relative;
+    font-family: "Playfair Display", Times, serif;
+    text-align: left
+}
+
+    #bootstrap-rooms .desc .price span {
+        color: #000;
+    }
+
+    #bootstrap-rooms .desc .price .currency {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        font-size: 30px;
+    }
+
+    #bootstrap-rooms .desc .price .price-room {
+        font-size: 60px;
+        font-weight: 400;
+        padding-left: 15px;
+    }
+
+#bootstrap-rooms .desc ul {
+    margin: 0 0 40px 0;
+    padding: 0;
+}
+
+    #bootstrap-rooms .desc ul li {
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+
+#footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 30px;
+    width: 100%;
+    background: #999;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+}
+
+

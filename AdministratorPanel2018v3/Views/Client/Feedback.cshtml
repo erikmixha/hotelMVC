@@ -1,0 +1,55 @@
+﻿
+@model AdministratorPanel2018v3.Models.FeedBack
+
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <fieldset>
+
+        <div class="col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-heading main-color-bg">
+                    <h3 class="panel-title">Feedback</h3>
+                </div>
+                
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group  col-md-4">
+                            <label>Email</label>
+                            <input type="text" name="email" id="email" class="form-control">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label>Leave a comment below about our hotel services </label>
+                        </div>
+                        <div class="container-fluid">
+                            @Html.TextAreaFor(model => model.Description, 5, 100, null)
+                        </div>
+                        <div class="col-md-offset-11">
+                            <input type="submit" class="btn btn-default" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="panel-body">
+
+                <div id="divEmployees">
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+    </fieldset>
+}
+
+<div id="dane">
+
+</div>

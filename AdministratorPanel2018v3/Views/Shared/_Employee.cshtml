@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AdministratorPanel2018v3.Models.New_Clases.Employee_Account>
+
+<table class="table table-hover" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            Buttons
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeID })
+            | @Html.ActionLink("Edit", "StatusEdit", new { id = item.EmployeeID })
+            | @Html.ActionLink("Change Email", "ChangeEmail", new { id = item.EmployeeID })
+        </td>
+
+    </tr>
+    }
+
+
+</table>
+
+

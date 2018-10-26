@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hotel </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse container-fluid navbar-fixed-top">
+        <div>
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-interval="false" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" @Html.ActionLink("HotelSystem", "Index")</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <div class="col-md-12 text-right menu-1">
+                    <ul class="nav navbar-nav ">
+                        <li> @Html.ActionLink("Home", "Index")</li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li>
+                            @Html.ActionLink("Account", "Login", "Account")
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid">
+        <div class="jumbotron">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="~/Content/RoomPictures/10.jpg" style="width:100%;">
+
+
+                    </div>
+
+                    <div class="item">
+                        <img src="~/Content/RoomPictures/12.jpg" alt="H2" style="width:100%;">
+
+                    </div>
+
+                    <div class="item">
+                        <img src="~/Content/RoomPictures/20.jpg" alt="H3" style="width:100%;">
+
+                    </div>
+
+                </div>
+
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        
+                                <div class="col-md-2 col-lg-offset-5">
+                                    <input type="button" name="submit" id="submit" value="Book Now!" class="btn btn-primary btn-block" onclick="@("location.href='"+ Url.Action("Index","Client")+ "'")" />
+                                </div>
+                      
+
+
+
+
+    </section>
+
+    <div id="bootstrap-rooms">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center bootstrap-heading animate-box">
+                    <span id="rooms"><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span>
+                    <h2>Rooms </h2>
+                    <p>We offer a variety of rooms for our clients which are listed below </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 room-wrap animate-box container-fluid">
+                    <a href="RoomPictures/1.jpg" class="room image-popup-link" style="background-image: url(/Content/RoomPictures/12.jpg);"></a>
+                    <div class="desc">
+                        <h3>Economy Room</h3>
+                        <div>
+                            <p class="price">
+                                <span class="currency">€</span>
+                                <span class="price-room">30</span>
+                                <span class="per">/ per night</span>
+                            </p>
+                        </div>
+                        <ul>
+                            <li><i class="icon-check"></i> Very good for short stays</li>
+                            <li><i class="icon-check"></i> Includes a work desk,TV and AC </li>
+                            <li><i class="icon-check"></i> Breakfast included </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 room-wrap animate-box container-fluid">
+                    <a href="RoomPictures/2.jpg" class="room image-popup-link" style="background-image: url(/Content/RoomPictures/13.jpg);"></a>
+                    <div class="desc">
+                        <h3>Standard Room</h3>
+                        <p class="price">
+                            <span class="currency">€</span>
+                            <span class="price-room">25</span>
+                            <span class="per">/ per night</span>
+                        </p>
+                        <ul>
+                            <li><i class="icon-check"></i> A comfortable standard room</li>
+                            <li><i class="icon-check"></i> Includes a TV </li>
+                            <li><i class="icon-check"></i> Perfect for traveling couples </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 room-wrap animate-box container-fluid">
+                    <a href="RoomPictures/3.jpg" class="room image-popup-link" style="background-image: url(/Content/RoomPictures/14.jpg);"></a>
+                    <div class="desc">
+                        <h3>Superior Room</h3>
+                        <p class="price">
+                            <span class="currency">€</span>
+                            <span class="price-room">35</span>
+                            <span class="per">/ per night</span>
+                        </p>
+                        <ul>
+                            <li><i class="icon-check"></i> Extra comfortable room</li>
+                            <li><i class="icon-check"></i> Includes AC, Tv and a Telephone</li>
+                            <li><i class="icon-check"></i> Breakfast included</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 room-wrap animate-box container-fluid">
+                    <a href="RoomPictures/4.jpg" class="room image-popup-link" style="background-image: url(/Content/RoomPictures/16.jpg);"></a>
+                    <div class="desc">
+                        <h3>Triple Room</h3>
+                        <p class="price">
+                            <span class="currency">€</span>
+                            <span class="price-room">35</span>
+                            <span class="per">/ per night</span>
+                        </p>
+                        <ul>
+                            <li><i class="icon-check"></i> Designed for family stay</li>
+                            <li><i class="icon-check"></i> Includes AC and TV</li>
+                            <li><i class="icon-check"></i> Breakfast included</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 room-wrap animate-box container-fluid">
+                    <a href="RoomPictures/5.jpg" class="room image-popup-link" style="background-image: url(/Content/RoomPictures/17.jpg);"></a>
+                    <div class="desc">
+                        <h3>Junior Apartment</h3>
+                        <p class="price">
+                            <span class="currency">€</span>
+                            <span class="price-room">37</span>
+                            <span class="per">/ per night</span>
+                        </p>
+                        <ul>
+                            <li><i class="icon-check"></i> Comfortable</li>
+                            <li><i class="icon-check"></i> Includes  a AC, Tv and a balcony with a view </li>
+                            <li><i class="icon-check"></i> Breakfast included</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 room-wrap animate-box container-fluid">
+                    <a href="RoomPictures/6.jpg" class="room image-popup-link" style="background-image: url(/Content/RoomPictures/18.jpg);"></a>
+                    <div class="desc">
+                        <h3>Family Room</h3>
+                        <p class="price">
+                            <span class="currency">€</span>
+                            <span class="price-room">48</span>
+                            <span class="per">/ per night</span>
+                        </p>
+                        <ul>
+                            <li><i class="icon-check"></i> Suitable for a family that needs rest,comfort and peace</li>
+                            <li><i class="icon-check"></i> Includes two separate bedroms</li>
+                            <li><i class="icon-check"></i> TV,AC,Balcony,Parking,Telephone</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 room-wrap animate-box container-fluid">
+                        <a href="RoomPictures/7.jpg" class="room image-popup-link" style="background-image: url(/Content/RoomPictures/19.jpg);"></a>
+                        <div class="desc">
+                            <h3>Suite</h3>
+                            <p class="price">
+                                <span class="currency">€</span>
+                                <span class="price-room">43</span>
+                                <span class="per">/ per night</span>
+                            </p>
+                            <ul>
+                                <li><i class="icon-check"></i> A sofa that can be converted to an additional bed</li>
+                                <li><i class="icon-check"></i> Breakfast and dinner included</li>
+                                <li><i class="icon-check"></i> TV,AC,Balcony,Parking,Telephone</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 room-wrap animate-box ">
+                        <a href="RoomPictures/8.jpg" class="room image-popup-link" style="background-image: url(/Content/RoomPictures/20.jpg);"></a>
+                        <div class="desc">
+                            <h3>Deluxe Room</h3>
+                            <p class="price">
+                                <span class="currency">€</span>
+                                <span class="price-room">55</span>
+                                <span class="per">/ per night</span>
+                            </p>
+                            <ul>
+                                <li><i class="icon-check"></i> Two separate bedrooms</li>
+                                <li><i class="icon-check"></i> All meal times included </li>
+                                <li><i class="icon-check"></i> Wardrobe, Bathtub, Shower,TV,AC,Balcony,Parking,Telephone </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="container-fluid">
+
+            <h1 id="about">About</h1>
+            <div class="col-md-6 ">
+                <p>
+                    <strong>
+                        Our History<br />
+                    </strong>
+                </p>
+
+                <p>For a couple of years we have been offering an outstanding service of hotelier in Albania and in the region. This hotel has improved itself during the past year in order to meet the highest values that make sure to offer all its clients a very comfortable stay. Our staff is delighted to serve you and make sure you get all the services you need.</p>
+            </div>
+
+
+            <p>
+                <strong>
+                    Our Vision<br />
+                </strong>
+            </p>
+            <p>
+                We provide happiness, peace, joy, relaxation, tasteful cooking and amazing sunsets in our Hotel. We are inspired by sea in order to produce delicious foods that meet the highest standards and provide a bite full of Mediterranean taste.
+                We encourage you to try our Hotel and we guarantee you that you will be visiting us again.
+            </p>
+        </div>
+
+
+
+
+
+        <div class="clear"></div>
+
+    </div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12 ">
+                <div id="map"></div>
+
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDusms4lC5R2GdiMujpByFGTC0ug2EoffU&callback=initMap">
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <h1 id="contact">Contact</h1>
+
+    <div class="col-md-6">
+        <h4>Contact Information</h4>
+        <ul>
+            <li>EGT-Tower, P. 11/1, Kati 2, Tiranë, Albania</li>
+            <li>+355 69 000 1111</li>
+            <li><a href="http://ikubinfo.al">ikubinfo.al</a></li>
+        </ul>
+    </div>
+    <br />
+    <br />
+    <br />
+
+
+
+
+    <a href="#home" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a>
+
+
+    <script src="~/Content/js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<AdministratorPanel2018v3.Models.Room>
+<div class="container-fluid">
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.RoomID)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.RoomStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Floor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomFacility.AirCon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomFacility.Balcony)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomFacility.Parking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomFacility.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomFacility.Tv)
+       
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Floor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomFacility.AirCon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomFacility.Balcony)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomFacility.Parking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomFacility.Telephone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomFacility.Tv)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "EditRoom", new { id = item.RoomID })
+            @Html.ActionLink("Delete", "Delete", new { id = item.RoomID })
+
+        </td>
+    </tr>
+    
+    }
+
+</table>
+    </div>

@@ -1,0 +1,142 @@
+﻿@model AdministratorPanel2018v3.Models.New_Clases.Room_Facilies_Photo
+
+
+@{
+    ViewBag.Title = "Create Room";
+}
+
+<h2>Create Room</h2>
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+
+@using (Ajax.BeginForm("SaveData", new AjaxOptions()
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "dane"
+
+}))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+<fieldset>
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.RoomStatus)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("Status", new List<SelectListItem>{
+new SelectListItem { Text = "Available", Value="Available" },
+new SelectListItem { Text = "Unavailable", Value="Unavailable" }
+}, "Select Value", new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.RoomDescription)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(model => model.RoomDescription)
+        @Html.ValidationMessageFor(model => model.RoomDescription)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Price)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Price, new { @class = "form-control", @type = "number" })
+        @Html.ValidationMessageFor(model => model.Price)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Size)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Size, new { @class = "form-control", @type = "number" })
+        @Html.ValidationMessageFor(model => model.Size)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FacilityID)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.FacilityID)
+        @Html.ValidationMessageFor(model => model.FacilityID)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Floor)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Floor, new { @class = "form-control", @type = "number" })
+        @Html.ValidationMessageFor(model => model.Floor)
+    </div>
+
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.AirCon)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("AirCon", new List<SelectListItem>{
+new SelectListItem { Text = "Yes", Value="1" },
+new SelectListItem { Text = "No", Value="0" }
+}, "Select Value", new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Tv)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("Tv", new List<SelectListItem>{
+new SelectListItem { Text = "Yes", Value="1" },
+new SelectListItem { Text = "No", Value="0" }
+}, "Select Value", new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Telephone)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("Telephone", new List<SelectListItem>{
+new SelectListItem { Text = "Yes", Value="1" },
+new SelectListItem { Text = "No", Value="0" }
+}, "Select Value", new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Balcony)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("Balcony", new List<SelectListItem>{
+new SelectListItem { Text = "Yes", Value="1" },
+new SelectListItem { Text = "No", Value="0" }
+}, "Select Value", new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Parking)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("Parking", new List<SelectListItem>{
+new SelectListItem { Text = "Yes", Value="1" },
+new SelectListItem { Text = "No", Value="0" }
+}, "Select Value", new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+
+    <br />
+
+    <div class="form-group">
+        <div class=" col-md-10 ">
+            <input type="submit" value="Next" class="btn btn-default" />
+            
+    </div>
+        </div>
+</fieldset>
+}
+
+<div id="dane">
+    
+</div>
+
+

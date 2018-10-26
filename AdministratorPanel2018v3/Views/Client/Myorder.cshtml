@@ -1,0 +1,130 @@
+﻿@model IEnumerable<AdministratorPanel2018v3.Models.New_Clases.RoomDescription>
+
+@{
+    ViewBag.Title = "Myorder";
+}
+
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/style.css" rel="stylesheet">
+
+
+
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center"> Your Selected Rooms</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Floor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AirCon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telephone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Balcony)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Parking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Days)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Floor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirCon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tv)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Balcony)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Parking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Days)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.ActionLink("Remove Order", "Remove", new { id = item.RoomID })
+            </td>
+
+
+        </tr>
+    }
+
+
+
+</table>
+<div class="col-lg-offset-10 " style="color:black; ">  <b>@Model.Sum(i => i.Total)</b></div>
+
+<div class=" col-md-offset-5">
+    <h1>
+        @Html.ActionLink("Book Rooms", "Save")
+    </h1>
+</div>
+
+<div>
+    <div class=" text-center">
+        @Html.ActionLink("Back to List", "AvList")
+    </div>
+</div>

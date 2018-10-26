@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/style.css" rel="stylesheet">
+
+<h2>
+    Reception Panel<span style="float:right">
+        @Html.ActionLink("Logout", "LogOff", "Account", new { area = "" }, new { @class = "text-right" })
+    </span>
+</h2>
+
+
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>  General Information</h1>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<section id="main">
+    <div class="container">
+        <dvi class="row">
+            <div class="col-md-3 ">
+                <div class="list-group">
+                    <a class="list-group-item active main-color-bg">
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Reception Menu
+                    </a>
+
+
+                    <button type="button" class="list-group-item">
+                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true">
+                            @Ajax.ActionLink("Create A Booking", "Book", new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "divEmployees", InsertionMode = InsertionMode.Replace })
+                        </span>
+                    </button>
+
+                    <button type="button" class="list-group-item">
+                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true">
+                            @Ajax.ActionLink("All Bookings", "Bookings", new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "divEmployees", InsertionMode = InsertionMode.Replace })
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+            <div class="col-md-8">
+                <!-- Website Overview -->
+                <div class="panel panel-default">
+                    <div class="panel-heading main-color-bg">
+                        <h3 class="panel-title">General Information</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-md-4">
+                            <div class="well dash-box">
+                                <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span>  @ViewBag.Clients</h2>
+                                <h4>Number of Customers</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="well dash-box">
+                                <h2><span class="glyphicon glyphicon-bed" aria-hidden="true"></span> @ViewBag.Rooms</h2>
+                                <h4>Total Rooms</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="well dash-box">
+                                <h2><span class="glyphicon glyphicon-book" aria-hidden="true"></span> @ViewBag.Bookings</h2>
+                                <h4>Total Bookings</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest Users -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+
+
+                        <div class="panel-body">
+
+                            <div id="divEmployees">
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+
+
+

@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Check-in";
+}
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/style.css" rel="stylesheet">
+
+
+
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center"> Book Room</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    @Html.ValidationSummary(true)
+    <fieldset>
+
+        <div class="col-md-12 text-center" >
+            <div class="panel panel-default">
+                <div class="panel-heading main-color-bg">
+                    <h3 class="panel-title">Please fill all fields</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-horizontal">
+
+
+
+
+                        <div class=" form-group ">
+                            <div class="text-center  col-md-12">Arrival Date</div>
+
+                            <div class="text-center  col-lg-offset-5">@Html.TextBox("ArrivalDate", null, new { @class = "form-control", @type = "date" })  </div>
+
+                        </div>
+
+
+
+
+
+                        <div class=" form-group ">
+                            <div class="text-center  col-md-12">Number of People</div>
+
+                            <div class="text-center  col-lg-offset-5">@Html.TextBox("Number", null, new { @class = "form-control", @type = "number" })  </div>
+
+                        </div>
+                        <div class=" form-group ">
+                            <div class="text-center  col-md-12">Number of Days</div>
+
+                            <div class="text-center  col-lg-offset-5">@Html.TextBox("Number of dates", null, new { @class = "form-control", @type = "number" })</div>
+
+                        </div>
+                        <div class=" form-group ">
+                            <div class="text-center  col-md-12">Name</div>
+
+                            <div class="text-center  col-lg-offset-5">@Html.TextBox("Firstname", null, new { @class = "form-control" }) </div>
+
+                        </div>
+                        <div class=" form-group ">
+                            <div class="text-center  col-md-12">LastName</div>
+
+                            <div class="text-center  col-lg-offset-5">@Html.TextBox("Lastname", null, new { @class = "form-control" }) </div>
+
+                        </div>
+                        <div class=" form-group ">
+                            <div class="text-center  col-md-12">Email</div>
+
+                            <div class="text-center  col-lg-offset-5">@Html.TextBox("Email", null, new { @class = "form-control" }) </div>
+
+                        </div>
+
+
+
+
+
+                        <div class="form-group text-center">
+                            <div class="">
+                                <input type="submit" value="Proceed" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </fieldset>
+
+}
+<div id="dane">
+
+</div>
+

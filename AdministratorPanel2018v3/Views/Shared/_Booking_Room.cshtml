@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AdministratorPanel2018v3.Models.New_Clases.RoomBook>
+
+<table class="table table-hover" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BookingID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Numberofpeople)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arrival_date)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Departure_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RoomStatus)
+        </th>
+        <th>
+            Buttons
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookingID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Numberofpeople)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Arrival_date)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Departure_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit Room Availability", "RoomStatus", new { id = item.RoomID })
+        </td>
+
+    </tr>
+    }
+</table>
+
+

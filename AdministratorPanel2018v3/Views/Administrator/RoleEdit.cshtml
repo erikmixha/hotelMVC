@@ -1,0 +1,92 @@
+﻿@model AdministratorPanel2018v3.Models.Employee
+
+@{
+    ViewBag.Title = "Edit Role";
+}
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/style.css" rel="stylesheet">
+
+
+
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center"> Update</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<section id="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+
+
+                @using (Html.BeginForm())
+                {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal" >
+                <h4 class="text-center">Role</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.EmployeeID)
+                @Html.HiddenFor(model => model.Salary)
+                @Html.HiddenFor(model => model.Firstname)
+                @Html.HiddenFor(model => model.Lastname)
+                @Html.HiddenFor(model => model.AccountID)
+                
+
+
+                <div class="form-group">
+                    <div class="text-center">
+                    <p>
+                        @Html.DropDownListFor(modelItem => modelItem.RoleID, new[] {new SelectListItem() {Text = "Administrator",Value ="1"},
+            new SelectListItem() {Text = "Manager",Value ="2"},new SelectListItem() {Text = "Reception",Value ="3"}}, "Choose an option")
+                    </p>
+                        </div>
+                    </div>
+                
+
+                    
+            
+
+            <div class="form-group">
+                    <div class="text-center">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+
+
+
+
+
+
+
+                <div class="text-center">
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+                </div>
+                }
+                
+
+                </div>
+            </div>
+        </div>
+
+        
+    </section>
+    
+
+
+
+
+

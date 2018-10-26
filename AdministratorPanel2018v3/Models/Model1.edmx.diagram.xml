@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="93b13c73642b4af2b0d9af2fbdf212fe" Name="Diagram1">
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Account" Width="1.5" PointX="1.5" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Bed" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Booking" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Booking_Rooms" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Client" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Employee" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.FeedBack" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Image" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Role" Width="1.5" PointX="1.5" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Room_Bed" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.RoomFacility" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelDatabase2018Model.Room" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Employee__Accoun__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Room_Bed__BedID__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Booking__ClientI__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Booking__Employe__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Booking_R__Booki__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Booking_R__RoomI__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__FeedBack__Client__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Employee__RoleID__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Images__RoomID__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Room_Bed__Facili__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelDatabase2018Model.FK__Rooms__FacilityI__25869641" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

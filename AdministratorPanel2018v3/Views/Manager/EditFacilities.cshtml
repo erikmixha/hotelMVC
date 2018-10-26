@@ -1,0 +1,116 @@
+﻿@model AdministratorPanel2018v3.Models.RoomFacility
+@{
+    ViewBag.Title = "Edit Facilities";
+}
+
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<link href="~/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/css/style.css" rel="stylesheet">
+
+
+
+<header id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center"> Edit Facilities</h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            <div class="col-md-offset-5">
+
+                @Html.LabelFor(model => model.Rooms, "Room ID", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.DropDownList("RoomID", String.Empty)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-5">
+
+                @Html.LabelFor(model => model, "Facility ID", htmlAttributes: new { @class = "control-label col-md-2" })
+                @Html.DropDownList("FacilityID", String.Empty)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-5">
+
+                @Html.LabelFor(model => model.AirCon, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.AirCon)
+                    @Html.ValidationMessageFor(model => model.AirCon, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-5">
+
+                @Html.LabelFor(model => model.Tv, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Tv)
+                    @Html.ValidationMessageFor(model => model.Tv, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-5">
+
+                @Html.LabelFor(model => model.Telephone, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Telephone)
+                    @Html.ValidationMessageFor(model => model.Telephone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-5">
+
+                @Html.LabelFor(model => model.Balcony, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Balcony)
+                    @Html.ValidationMessageFor(model => model.Balcony, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-5">
+
+                @Html.LabelFor(model => model.Parking, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Parking)
+                    @Html.ValidationMessageFor(model => model.Parking, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" col-md-10 col-md-offset-6">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+    <div>
+        <div class=" col-md-10 col-md-offset-6">
+            @Html.ActionLink("Back to Panel", "Index")
+        </div>
+    </div>
